@@ -29,7 +29,7 @@ echo Appuyez sur 3 pour allez sur les choix de fichier de Discord.
 set /p choix=
 if %choix%==1 goto windows
 if %choix%==2 goto Navigateur
-if %choix%==3 goto compress
+if %choix%==3 goto fin
 
 :windows
 cls
@@ -57,7 +57,6 @@ echo.
 echo.
 echo.
 start navigateur.bat
-pause
 goto fin
 
 :compress
@@ -77,5 +76,4 @@ pause
 goto fin
 
 :fin
-echo tout est ok !
-pause > nul
+exit
