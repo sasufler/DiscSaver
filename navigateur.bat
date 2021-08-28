@@ -112,8 +112,8 @@ echo.
 echo.
 echo.
 echo Appuyer sur 1 pour supprimer juste le cache de OperaGX
-echo Appuyer sur 2 pour supprimer que les cookies de OperaGX
-echo Appuyer sur 3 pour supprimer les cookies et le cache de OperaGX
+echo Appuyer sur 2 pour supprimer que les cookies de OperaGX (/!\ CELA VAS VOUS DECONNECTER DE TOUT LES SITES !)
+echo Appuyer sur 3 pour supprimer les cookies et le cache de OperaGX (/!\ CELA VAS VOUS DECONNECTER DE TOUT LES SITES !)
 echo Appuyer sur 4 pour retourner au menu de Disc Saver - Navigateur
 set /p choix2=
 if %choix2%==1 goto tempoperagx
@@ -133,8 +133,8 @@ echo ╚═════╝ ╚═╝╚══════╝ ╚═════�
 echo.
 echo.
 echo.
-cd %appdata%\Opera Software\Opera GX Stable
-rmdir /S %appdata%\Opera Software\Opera GX Stable\Cache
+cd %localappdata%\Opera Software\Opera GX Stable\Cache
+del *
 goto start
 
 
@@ -167,8 +167,8 @@ echo.
 echo.
 cd %appdata%\Opera Software\Opera GX Stable
 del Cookies
-cd %appdata%\Opera Software\Opera GX Stable
-rmdir /S %appdata%\Opera Software\Opera GX Stable\Cache
+cd %localappdata%\Opera Software\Opera GX Stable\Cache
+del *
 goto start
 
 
@@ -183,5 +183,59 @@ echo ╚═════╝ ╚═╝╚══════╝ ╚═════�
 echo.
 echo.
 echo.
+echo Appuyer sur 1 si vous voulez juste supprimer le cache tapez 1
+echo Appuyer sur 2 si vous voulez juste supprimer les cookies (/!\ CELA VAS VOUS DECONNECTER DE TOUT LES SITES !)
+echo Appuyer sur 3 si vous voulez supprimer les 2 (/!\ CELA VAS VOUS DECONNECTER DE TOUT LES SITES !)
+echo Appuyer sur 4 pour retourner au menu de Disc Saver - Navigateur
+set /p choix3=
+if %choix3%==1 goto tempopera
+if %choix3%==2 goto cookiesopera
+if %choix3%==2 goto opera2
+if %choix3%==2 goto start
 
-pause > nul
+:tempopera
+cls
+echo ██████╗ ██╗███████╗ ██████╗    ███████╗ █████╗ ██╗   ██╗███████╗██████╗ 
+echo ██╔══██╗██║██╔════╝██╔════╝    ██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗
+echo ██║  ██║██║███████╗██║         ███████╗███████║██║   ██║█████╗  ██████╔╝
+echo ██║  ██║██║╚════██║██║         ╚════██║██╔══██║╚██╗ ██╔╝██╔══╝  ██╔══██╗
+echo ██████╔╝██║███████║╚██████╗    ███████║██║  ██║ ╚████╔╝ ███████╗██║  ██║
+echo ╚═════╝ ╚═╝╚══════╝ ╚═════╝    ╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝
+echo.
+echo.
+echo.
+cd %localappdata%\Opera Software\Opera Stable
+rmdir /S %localappdata%\Opera Software\Opera Stable
+goto start
+
+:cookiesopera
+cls
+echo ██████╗ ██╗███████╗ ██████╗    ███████╗ █████╗ ██╗   ██╗███████╗██████╗ 
+echo ██╔══██╗██║██╔════╝██╔════╝    ██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗
+echo ██║  ██║██║███████╗██║         ███████╗███████║██║   ██║█████╗  ██████╔╝
+echo ██║  ██║██║╚════██║██║         ╚════██║██╔══██║╚██╗ ██╔╝██╔══╝  ██╔══██╗
+echo ██████╔╝██║███████║╚██████╗    ███████║██║  ██║ ╚████╔╝ ███████╗██║  ██║
+echo ╚═════╝ ╚═╝╚══════╝ ╚═════╝    ╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝
+echo.
+echo.
+echo.
+cd %appdata%\Opera Software\Opera Stable
+del Cookies
+goto start
+
+:opera2
+cls
+echo ██████╗ ██╗███████╗ ██████╗    ███████╗ █████╗ ██╗   ██╗███████╗██████╗ 
+echo ██╔══██╗██║██╔════╝██╔════╝    ██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗
+echo ██║  ██║██║███████╗██║         ███████╗███████║██║   ██║█████╗  ██████╔╝
+echo ██║  ██║██║╚════██║██║         ╚════██║██╔══██║╚██╗ ██╔╝██╔══╝  ██╔══██╗
+echo ██████╔╝██║███████║╚██████╗    ███████║██║  ██║ ╚████╔╝ ███████╗██║  ██║
+echo ╚═════╝ ╚═╝╚══════╝ ╚═════╝    ╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝
+echo.
+echo.
+echo.
+cd %appdata%\Opera Software\Opera Stable
+del Cookies
+cd %localappdata%\Opera Software\Opera Stable
+rmdir /S %localappdata%\Opera Software\Opera Stable
+goto start
