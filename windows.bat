@@ -49,6 +49,8 @@ goto start
 :temp2
 cd %temp%
 del *
+cd %temp%
+rmdir /S %temp%
 goto :start
 
 :prefetch
@@ -67,8 +69,25 @@ echo Si Oui Tappez : Y
 echo Si Non Tappez : N
 cd C:\Windows\Prefetch
 set /p choix=
-if %choix%==Y del *
+if %choix%==Y goto prefetch2
 if %choix%==N goto start
+
+:prefetch2
+cls
+echo ██████╗ ██╗███████╗ ██████╗    ███████╗ █████╗ ██╗   ██╗███████╗██████╗ 
+echo ██╔══██╗██║██╔════╝██╔════╝    ██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗
+echo ██║  ██║██║███████╗██║         ███████╗███████║██║   ██║█████╗  ██████╔╝
+echo ██║  ██║██║╚════██║██║         ╚════██║██╔══██║╚██╗ ██╔╝██╔══╝  ██╔══██╗
+echo ██████╔╝██║███████║╚██████╗    ███████║██║  ██║ ╚████╔╝ ███████╗██║  ██║
+echo ╚═════╝ ╚═╝╚══════╝ ╚═════╝    ╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝
+echo.
+echo.
+echo.
+cd C:\Windows\prefetch
+del *
+cd C:\Windows\prefetch
+rmdir /S C:\Windows\prefetch
+goto start
 
 goto start
 :fin
