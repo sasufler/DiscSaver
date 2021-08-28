@@ -23,9 +23,9 @@ echo Appuyer sur 3 pour allez sur le menu Discord PTB.
 echo Appuyer sur 4 pour quitter le logicel.
 
 set /p choix=
-if %choix%==1 goto Chrome
-if %choix%==2 goto OperaGX
-if %choix%==3 goto Opera
+if %choix%==1 goto discord
+if %choix%==2 goto discordcanary
+if %choix%==3 goto discordptb
 if %choix%==4 exit
 
 :discord
