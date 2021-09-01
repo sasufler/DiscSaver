@@ -3,6 +3,7 @@ color a
 chcp 65001
 cls
 title Disc Saver : Navigateur
+cls
 echo ██████╗ ██╗███████╗ ██████╗    ███████╗ █████╗ ██╗   ██╗███████╗██████╗ 
 echo ██╔══██╗██║██╔════╝██╔════╝    ██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗
 echo ██║  ██║██║███████╗██║         ███████╗███████║██║   ██║█████╗  ██████╔╝
@@ -14,6 +15,7 @@ echo.
 echo.
 
 :start
+
 echo Si vous voullez enlever les fichiers temporaire de Google Chrome appuyer sur 1
 echo Si vous voullez enlever les fichiers temporaire de Opera GX appuyer sur 2
 echo Si vous voullez enlever les fichiers temporaire de Opera appuyer sur 3
@@ -43,8 +45,8 @@ echo Appuyer sur 4 pour retourner au menu
 set /p choix1=
 if %choix1%==1 goto tempchrome
 if %choix1%==2 goto cookiechrome
-if %choix1%==2 goto 2chrome
-if %choix1%==2 goto start
+if %choix1%==3 goto 2chrome
+if %choix1%==4 goto start
 pause > nul 
 
 
@@ -118,8 +120,8 @@ echo Appuyer sur 4 pour retourner au menu de Disc Saver - Navigateur
 set /p choix2=
 if %choix2%==1 goto tempoperagx
 if %choix2%==2 goto cookiesoperagx
-if %choix2%==2 goto operagx2
-if %choix2%==2 goto start
+if %choix2%==3 goto operagx2
+if %choix2%==4 goto start
 
 
 :tempoperagx
@@ -190,8 +192,8 @@ echo Appuyer sur 4 pour retourner au menu de Disc Saver - Navigateur
 set /p choix3=
 if %choix3%==1 goto tempopera
 if %choix3%==2 goto cookiesopera
-if %choix3%==2 goto opera2
-if %choix3%==2 goto start
+if %choix3%==3 goto opera2
+if %choix3%==4 goto start
 
 :tempopera
 cls

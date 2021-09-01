@@ -85,8 +85,6 @@ echo.
 echo.
 cd C:\Windows\prefetch
 del *
-cd C:\Windows\prefetch
-rmdir /S C:\Windows\prefetch
 goto start
 
 goto start

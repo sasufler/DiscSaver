@@ -139,15 +139,15 @@ if %choix4%==4 goto start
 :discordcanarycache
 cd %appdata%\discordcanary\Cache
 del *
-goto discordcanary
+goto start
 
 :discordcanarygpu
 goto %appdata%\discordcanary\GPUCache
 del *
-goto discordcanary
+goto start
 
 :discordcanary2
-goto %appdata%\discordcanary\GPUCache
+cd %appdata%\discordcanary\GPUCache
 del *
 cd %appdata%\discordcanary\Cache
 del *
